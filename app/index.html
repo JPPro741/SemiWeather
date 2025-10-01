@@ -1,0 +1,33 @@
+<!-- 
+ * Copyright (c) 2025 JPPro741
+ * FOR MORE INFO SEE THE LICENSE FILE 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Seminario Weather</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🌤️ Seminario Weather</h1>
+    
+    <label for="city">Enter City:</label>
+    <input type="text" id="city" placeholder="e.g. New York">
+
+    <label for="datetime">Introduzca fecha:</label>
+    <input type="datetime-local" id="datetime">
+
+    <button onclick="getWeather()">Obtener Clima</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <script src="script.js"></script>
+</body>
+</html>
