@@ -66,11 +66,11 @@ async function getWeather() {
 
     //Escribir la info
     const weatherHTML = `
-      <h2>Clima en ${data.city.name} a las ${localTime} (Hora local mas cercana)</h2>
-      <p><strong>Temperatura:</strong> ${closest.main.temp}°C</p>
-      <p><strong>Clima:</strong> ${closest.weather[0].description}</p>
-      <p><strong>Humedad:</strong> ${closest.main.humidity}%</p>
-      <p><strong>Velocidad del viento:</strong> ${closest.wind.speed} m/s</p>
+      <h2>Climaate in ${data.city.name} at ${localTime} (Closest local time)</h2>
+      <p><strong>Temperature:</strong> ${closest.main.temp}°C</p>
+      <p><strong>Climate:</strong> ${closest.weather[0].description}</p>
+      <p><strong>Humidity:</strong> ${closest.main.humidity}%</p>
+      <p><strong>Wind speed:</strong> ${closest.wind.speed} m/s</p>
     `;
 
     resultDiv.innerHTML = weatherHTML;
