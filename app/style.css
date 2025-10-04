@@ -3,42 +3,6 @@
  * FOR MORE INFO SEE THE LICENSE FILE  
 */
 /* contenedor */
-#mainBody {
-  position: relative;
-  overflow: hidden;
-}
-
-/* capas: ambas ocupan todo el contenedor */
-#mainBody::before,
-#mainBody::after {
-  content: "";
-  position: absolute;
-  inset: 0;                 /* top:0; right:0; bottom:0; left:0; */
-  transition: opacity 900ms ease;
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* day */
-#mainBody::before {
-  background: linear-gradient(135deg, #e7fe89ff, #e86b11ff);
-  opacity: 0;               /* por defecto oculto */
-}
-
-/* night */
-#mainBody::after {
-  background: linear-gradient(135deg, #232526, #362ac4ff);
-  opacity: 1;               /* por defecto visible */
-}
-
-/* cuando agregues la clase .day, mostramos el day y escondemos el night */
-#mainBody.day::before { opacity: 1; }
-#mainBody.day::after  { opacity: 0; }
-
-/* para que el contenido del mainBody esté por encima de las capas */
-#mainBody > * { position: relative; z-index: 2; }
-
-
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #89f7fe, #66a6ff);
