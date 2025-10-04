@@ -83,11 +83,6 @@ async function getWeather() {
 //Cambiar fondo segun hora =D
 function changeBG(dn) {
   const bodyy = document.body;
-  bodyy.style.transition = "background 1s ease"; // transición suave
-
-  if (dn === "day") {
-    bodyy.style.background = "linear-gradient(135deg, #e7fe89ff, #e86b11ff)";
-  } else {
-    bodyy.style.background = "linear-gradient(135deg, #232526, #362ac4ff)";
-  }
+  if (!bodyy) return;
+  bodyy.classList.toggle("day", dn === "day"); // si dn == "day" agrega .day, si no la quita
 }
