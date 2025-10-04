@@ -103,9 +103,6 @@ button:hover {
   font-size: 20px;
   color: #e53737;
 }
-#mainBody {
-  transition: background 1s ease;
-}
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(100px); }
