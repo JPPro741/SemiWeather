@@ -37,7 +37,7 @@ async function getWeather() {
 
   //Detectar que se hayan introducido la fecha y lugar
   if (!city || !datetime) {
-    resultDiv.innerHTML = "<h3>Porfavor introduzca un lugar y hora.</h3>";
+    resultDiv.innerHTML = "<h3>Please introduce a place and time.</h3>";
     return;
   }
 
@@ -76,7 +76,7 @@ async function getWeather() {
     resultDiv.innerHTML = weatherHTML;
 
   } catch (error) {
-    resultDiv.innerHTML = `<h3>Error desconocido =(.</h3>`;
+    resultDiv.innerHTML = `<h3>Unknonw error=(.</h3>`;
     console.error(error);
   }
 }
