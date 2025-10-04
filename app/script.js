@@ -81,18 +81,11 @@ async function getWeather() {
   }
 }
 //Cambiar fondo segun hora =D
-document.addEventListener("DOMContentLoaded", () => {
-  const body = document.getElementById("mainBody");
-
-  function changeBG(dn) {
-    if (dn == "day") {
-      body.style.background = "linear-gradient(135deg, #89f7fe, #66a6ff)";
-    } else {
-      body.style.background = "linear-gradient(135deg, #232526, #414345)";
-    }
+function changeBG(dn) {
+  const bodyy = document.getElementById("mainBody")
+  if (dn == "day") {
+    bodyy.style.background = "linear-gradient(135deg, #89f7fe, #66a6ff)";
+  } else {
+    bodyy.style.background = "linear-gradient(135deg, #232526, #414345)";
   }
-
-  changeBG("day");
-});
-
-
+}
