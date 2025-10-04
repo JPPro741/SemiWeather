@@ -10,7 +10,9 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+  transition: background 0.6s ease-in-out; /* Ensure this line is present */
 }
+
 
 .container {
   background: #caebff;
@@ -89,6 +91,12 @@ button:hover {
 
 #result h2 {
   font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #222;
+  margin-top: 0px;
+}
+#result h4 {
+  font-size: 1.5rem;
   margin-bottom: 10px;
   color: #222;
   margin-top: 0px;
