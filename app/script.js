@@ -85,7 +85,7 @@ function changeBG(dn) {
   const bodyy = document.body;
   if (dn == "day") {
     bodyy.style.background = "linear-gradient(135deg, #e7fe89ff, #e86b11ff)";
-  } else {
+  } else if (dn == "night"){
     bodyy.style.background = "linear-gradient(135deg, #232526, #362ac4ff)";
   }
 }
