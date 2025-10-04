@@ -84,8 +84,8 @@ async function getWeather() {
 function changeBG(dn) {
   const bodyy = document.body
   if (dn == "day") {
-    bodyy.style.background = "linear-gradient(135deg, #89f7fe, #66a6ff)";
+    bodyy.style.background = "linear-gradient(135deg, #e7fe89ff, #e86b11ff)";
   } else {
-    bodyy.style.background = "linear-gradient(135deg, #232526, #414345)";
+    bodyy.style.background = "linear-gradient(135deg, #232526, #362ac4ff)";
   }
 }
