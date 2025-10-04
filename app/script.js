@@ -80,3 +80,14 @@ async function getWeather() {
     console.error(error);
   }
 }
+//Cambiar fondo segun hora =D
+const body = document.getElementById("mainBody");
+function changeBG(dn) {
+  if (dn=="day") {
+    body.style.background = "linear-gradient(135deg, #f8fe89ff, #ffa666ff)";
+  } else if (dn=="night") {
+    body.style.background = "linear-gradient(135deg, #23146bff, #170ff8ff)";
+  }
+}
+
+
