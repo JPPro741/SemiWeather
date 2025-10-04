@@ -64,10 +64,12 @@ async function getWeather() {
     //Pasar a hora local
     const localTime = new Date(closest.dt_txt).toLocaleString();
 
+    changeBG(localTime)
+
     //Escribir la info
     const weatherHTML = `
       <h2>Climate in ${data.city.name} at ${localTime} (Closest local time)</h2>
-      <p><strong>Temperature:</strong> ${closest.main.temp}°C</p>
+      <h4><strong>Temperature:</strong> ${closest.main.temp}°C</h4>
       <p><strong>Climate:</strong> ${closest.weather[0].description}</p>
       <p><strong>Humidity:</strong> ${closest.main.humidity}%</p>
       <p><strong>Wind speed:</strong> ${closest.wind.speed} m/s</p>
@@ -80,12 +82,20 @@ async function getWeather() {
     console.error(error);
   }
 }
+
 //Cambiar fondo segun hora =D
-function changeBG(dn) {
+function changeBG(time) {
   const bodyy = document.body;
-  if (dn == "day") {
+  const dn = getPM(time);
+  if (dn === "AM") {
     bodyy.style.background = "linear-gradient(135deg, #e7fe89ff, #e86b11ff)";
-  } else if (dn == "night"){
+  } else if (dn === "PM") {
     bodyy.style.background = "linear-gradient(135deg, #232526, #362ac4ff)";
   }
+}
+
+function getPM(time) {
+  const localDate2 = new Date(time);
+  const period = localDate2.getHours() >= 12 ? "PM" : "AM";
+  return period;
 }
