@@ -82,7 +82,7 @@ async function getWeather() {
 }
 //Cambiar fondo segun hora =D
 function changeBG(dn) {
-  const bodyy = document.getElementById("mainBody")
+  const bodyy = document.body
   if (dn == "day") {
     bodyy.style.background = "linear-gradient(135deg, #89f7fe, #66a6ff)";
   } else {
