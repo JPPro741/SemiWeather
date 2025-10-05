@@ -3,7 +3,7 @@ const LAT = document.getElementById("LAT").value;
 const LON = document.getElementById("LON").value;
 const DATE = document.getElementById("DATE").value;
 
-fetch("https://weather-backend.onrender.com/submit", {
+fetch("https://semiweatherbacl.onrender.com/submit", {
     method: "POST",
     headers: {
         "Content-Type": "application/x-www-form-urlencoded"
